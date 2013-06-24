@@ -4,17 +4,17 @@
 	function create_table($file)
 		{
 			$file_content = file($file);
-				$query = "";
-				foreach($file_content as $sql_line){
+			$query = "";
+			foreach($file_content as $sql_line){
 				if(trim($sql_line) != "" && strpos($sql_line, "--") === false){
-				 $query .= $sql_line;
-				 if (substr(rtrim($query), -1) == ';'){
-				   //echo $query;
-				   $result = mysql_query($query)or die(mysql_error());
-				   $query = "";
-				  }
-				 }
-				}	
+					$query .= $sql_line;
+					if (substr(rtrim($query), -1) == ';'){
+						//echo $query;
+						$result = mysql_query($query)or die(mysql_error());
+						$query = "";
+				  	}
+				}
+			}	
 		}
 	
 	if(isset($_POST['install']))
@@ -71,9 +71,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Untitled Document</title>
-<link href="styles_spidergraph.css" rel="stylesheet" type="text/css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Untitled Document</title>
+	<link href="styles_spidergraph.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -86,14 +86,14 @@
 <div id="sg_wrap">
 <h2 align="center">This file  sets up the DQP Spidergraph application on your own server. </h2>
 <div id="TwoCol_left_50">
-  <p>&nbsp;</p>
-  <blockquote>
-    <p><strong class="big_number">1.</strong> Before you do anything, rename the file: common-sample.php to common.php and edit the top section of common.php to match your server environment.</p>
-    <p><span class="big_number">2.</span> Create an admin account with a good, strong password. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="big_number">&rarr;</span></p>
-    <p><span class="big_number">3.</span> Decide if you want to pre-populate the database with some data. <br />
-      (You can always delete it later, but if you install the sample data you'll be able to make sure everything works right away.) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="big_number">&rarr;</span></p>
-  </blockquote>
-  </div>
+	<p>&nbsp;</p>
+	<blockquote>
+		<p><strong class="big_number">1.</strong> Before you do anything, rename the file: common-sample.php to common.php and edit the top section of common.php to match your server environment.</p>
+		<p><span class="big_number">2.</span> Create an admin account with a good, strong password. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="big_number">&rarr;</span></p>
+		<p><span class="big_number">3.</span> Decide if you want to pre-populate the database with some data. <br />
+	  (You can always delete it later, but if you install the sample data you'll be able to make sure everything works right away.) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="big_number">&rarr;</span></p>
+	</blockquote>
+</div>
 
 <div id="TwoCol_right_50">
   <form id="form1" name="form1" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
