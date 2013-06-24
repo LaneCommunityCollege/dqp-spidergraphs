@@ -1,6 +1,6 @@
 <?php
 	include("common.php");
-	
+
 	function create_table($file)
 		{
 			$file_content = file($file);
@@ -77,7 +77,11 @@
 </head>
 
 <body>
-<p>&nbsp;</p><p>&nbsp;</p>
+<div id="header">
+	<img src="images/DQP color logo.png" alt="DQP Logo" width="300" height="103">
+</div>
+<div class="clear"></div>
+
 <?php echo $msg->display(); ?>
 <div id="sg_wrap">
 <h2 align="center">This file  sets up the DQP Spidergraph application on your own server. </h2>
