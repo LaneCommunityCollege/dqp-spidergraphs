@@ -36,4 +36,4 @@ In keeping with that spirit, at the October, 2012 conference at Lane, we decided
 For more information, please visit http://opensource.org/licenses/MIT
 
 ## Changes ##
-1.0 - 6/24/2013 - Initial release of PHP/MySQL based (non-Django) version of the spidergraph.
+v1.0 - 6/24/2013 - Initial release of PHP/MySQL based (non-Django) version of the spidergraph.
