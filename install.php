@@ -50,12 +50,15 @@
 										{ create_table("sql/". $table .".sql"); }
 								}
 
+							// Protect login email from SQL Injection
+							$clean_email = mysql_real_escape_string($_POST['email']);
+							
 							// Crypt the password and put it in the database
-							$crypt_pw = crypt($_POST['pass']); 
+							$crypt_pw = crypt(mysql_real_escape_string($_POST['pass'])); 
 							create_table("sql/users.sql");
 							$insert = mysql_query("INSERT INTO users (user_id, user_institution, user_name, user_title, user_email, 
 														  user_phone, user_ext, user_pass, user_active)
-										  			VALUES ('', '0', 'admin', '', '$_POST[email]', '', '', '$crypt_pw', 'y')");
+										  			VALUES ('', '0', 'admin', '', '$clean_email', '', '', '$crypt_pw', 'y')");
 							
 							// Set a message and forward to the login page
 							$msg->add("e", "Admin Account and Database have been set up.  You should now delete the install.php file.");
