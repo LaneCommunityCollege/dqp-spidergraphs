@@ -23,16 +23,16 @@
 			if($_GET['program_id'] && $_GET['crs_id'] == "" && $_GET['confirmed'] == 'yes')
 				{
 					// Set the program to inactive
-					$update = mysql_query("UPDATE spidergraph_programs SET prog_active='n' WHERE prog_id='$_GET[program_id]'");
+					$update = mysql_query("UPDATE spidergraph_programs SET prog_active='n' WHERE prog_id='$_GET[program_id]' AND inst_id='$SESSION[inst_id]'");
 					// Delete the connections to all courses
-					$delete = mysql_query("DELETE FROM spidergraph_course_to_program WHERE prog_id='$_GET[program_id]'");
+					$delete = mysql_query("DELETE FROM spidergraph_course_to_program WHERE prog_id='$_GET[program_id]' AND inst_id='$SESSION[inst_id]'");
 				}
 				
 			// If we're deleting a Course (both crs_id and program_id are set in the link)	
 			elseif($_GET['program_id'] > 0 && $_GET['crs_id'] > 0 && $_GET['confirmed'] == 'yes')
 				{
 					// Delete all connections to this course from this program
-					$delete = mysql_query("DELETE FROM spidergraph_course_to_program WHERE crs_id='$_GET[crs_id]' AND prog_id='$_GET[program_id]'");
+					$delete = mysql_query("DELETE FROM spidergraph_course_to_program WHERE crs_id='$_GET[crs_id]' AND prog_id='$_GET[program_id]' AND inst_id='$SESSION[inst_id]'");
 				}
 		}
 
