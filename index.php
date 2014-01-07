@@ -2,6 +2,8 @@
 	include("common.php");
 	include("header.inc.php");
 ?>
+<title>Spidergraphs</title>
+
 
   <blockquote>
     <img src="images/Spidergraph.jpg" alt="" align="right" /><h1>Institutions</h1>

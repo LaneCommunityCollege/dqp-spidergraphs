@@ -43,8 +43,8 @@
 			{
 				extract($row_programs);
 				echo "<li>". $prog_name ."
-					    <a href='$_SERVER[PHP_SELF]?action=activate&program_id=$prog_id'><img src='$images_url/button_activate_tiny.png' align='right' width='20' height='20' alt='Delete Program' title='Delete' hspace='8' /></a>
-						<a href='program_outcomes_report.php?program_id=$prog_id'><img src='$images_url/icon_REPORT.png' align='right' alt='View Report' title='Report' hspace='4' /></a>
+					    <a href='$_SERVER[PHP_SELF]?action=activate&program_id=$prog_id'><img src='$dqp_url/images/button_activate_tiny.png' align='right' width='20' height='20' alt='Activate Program' title='Delete' hspace='8' /></a>
+						<a href='program_outcomes_report.php?program_id=$prog_id'><img src='$dqp_url/images/icon_REPORT.png' align='right' alt='View Report' title='Report' hspace='4' /></a>
 					  </li><hr />";
 			}
 		?>			

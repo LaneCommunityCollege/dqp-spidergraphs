@@ -12,8 +12,15 @@
 	
 	if(isset($_GET['action']) && $_GET['action'] == "delete")
 		{
+			// Add an error message and a way back
+			if(!$_GET['confirmed'])
+				{
+					die("<p>You're about to delete something!  Are you sure?</p>
+						<p>If so, <a href='$PHP_SELF?action=delete&confirmed=yes&crs_id=$_GET[crs_id]&program_id=$_GET[program_id]'>CLICK HERE</a> to continue.</p><p>If you didn't mean to delete something, just use your browser's back button.</p>");
+				}
+				
 			// If we're deleting a Program (there's no crs_id in the link)
-			if($_GET['program_id'] && !isset($_GET['crs_id']))
+			if($_GET['program_id'] && $_GET['crs_id'] == "" && $_GET['confirmed'] == 'yes')
 				{
 					// Set the program to inactive
 					$update = mysql_query("UPDATE spidergraph_programs SET prog_active='n' WHERE prog_id='$_GET[program_id]'");
@@ -22,7 +29,7 @@
 				}
 				
 			// If we're deleting a Course (both crs_id and program_id are set in the link)	
-			elseif($_GET['program_id'] && $_GET['crs_id'])
+			elseif($_GET['program_id'] > 0 && $_GET['crs_id'] > 0 && $_GET['confirmed'] == 'yes')
 				{
 					// Delete all connections to this course from this program
 					$delete = mysql_query("DELETE FROM spidergraph_course_to_program WHERE crs_id='$_GET[crs_id]' AND prog_id='$_GET[program_id]'");
