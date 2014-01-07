@@ -8,11 +8,10 @@ The Spidergraphs are designed to allow individual institutions to input their in
 outcomes and view them in a graphical way.
   
 ## Server Config ##
-The application was written using PHP (5.x) and MySQL (5.x) on a Linux server.  PHP and MySQL is used conservatively, so you
-should be able to install this on any server with current versions of PHP/MySQL and have it up and running within a few minutes.
+The application was written using PHP (5.x) and MySQL (5.x) on a Linux server.  PHP and MySQL are used conservatively, so you should be able to install this on any server with current versions of PHP/MySQL and have it up and running within a few minutes.
 
 ## Install ##
-1. Download the lastes version
+1. Download the lastest version
 2. Unzip the archive
 3. Rename settings.inc-SAMPLE.php to settings.inc.php and edit to match your database server
 4. Upload the files to a folder on your server
@@ -37,4 +36,7 @@ For more information, please visit http://opensource.org/licenses/MIT
 
 ## Changes ##
 v1.0 - 6/24/2013 - Initial release of PHP/MySQL based (non-Django) version of the spidergraph.
+<<<<<<< HEAD
 v1.01 - 1/7/2014 - Added SESSION var to update and delete lines so you can only update/delete items from your own institution.
+=======
+>>>>>>> 00d5f35fc60d94baf80233a8284208371ed8de77
