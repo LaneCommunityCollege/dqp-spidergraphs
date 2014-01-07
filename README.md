@@ -8,8 +8,7 @@ The Spidergraphs are designed to allow individual institutions to input their in
 outcomes and view them in a graphical way.
   
 ## Server Config ##
-The application was written using PHP (5.x) and MySQL (5.x) on a Linux server.  PHP and MySQL is used conservatively, so you
-should be able to install this on any server with current versions of PHP/MySQL and have it up and running within a few minutes.
+The application was written using PHP (5.x) and MySQL (5.x) on a Linux server.  PHP and MySQL are used conservatively, so you should be able to install this on any server with current versions of PHP/MySQL and have it up and running within a few minutes.
 
 ## Install ##
 1. Download the lastest version
