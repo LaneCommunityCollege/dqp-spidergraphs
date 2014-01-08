@@ -60,16 +60,21 @@
 														  user_phone, user_ext, user_pass, user_active)
 										  			VALUES ('', '0', 'admin', '', '$clean_email', '', '', '$crypt_pw', 'y')");
 							
+							// Rename the install.php file
+							if(!unlink("install.php")) { echo "Install File Not Deleted!"; }
+							
 							// Set a message and forward to the login page
-							$msg->add("e", "Admin Account and Database have been set up.  You should now delete the install.php file.");
-							header("Location: index.php");
+							$msg->add("i", "<p>Admin Account and Database have been set up and the install.php file has been deleted.</p>
+											<p>If you need to reset the database, please upload install.php from the original archive and run it again.</p>
+											<p>You may now continue to the <a href='admin_index.php'>Spidergraph Admin</a>.");
+							//header("Location: index.php");
 						}
 					else
 						{ $msg->add("e", "Your PASSWORD and CONFIRMATION don't match."); }
 				}
 			else
 				{ $msg->add("e", "Email Address and both Password and Confirmation fields are required."); }
-		}
+		}	
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
