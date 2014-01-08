@@ -58,12 +58,16 @@
         <form id="form1" name="form1" method="post" action="">
 	  	  <table width="100%" border="0" cellspacing="0" cellpadding="0">
 	  	    <tr>
-	  	      <td width="28%" align="right"><strong>User Name:</strong></td>
+	  	      <td width="28%" align="right">
+	  	      	<label for="email"><strong>User Name:</strong></label>
+	  	      </td>
 	  	      <td width="72%" align="left"><input type="text" name="email" id="email" /> 
 	  	        (email address)</td>
   	        </tr>
 	  	    <tr>
-	  	      <td align="right"><strong>Password:</strong></td>
+	  	      <td align="right">
+	  	      	<label for="password"><strong>Password:</strong></label>
+	  	      </td>
 	  	      <td align="left"><input type="password" name="pass" id="pass" /></td>
   	        </tr>
 	  	    <tr>
