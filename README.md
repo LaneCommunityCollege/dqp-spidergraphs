@@ -17,6 +17,7 @@ The application was written using PHP (5.x) and MySQL (5.x) on a Linux server.  
 4. Upload the files to a folder on your server
 5. Visit [your_server_address]/[folder_name]/install.php (example: http://oregondqp.org/spidergraphs/install.php)
 6. Follow the instructions
+7. DELETE install.php so that your database doesn't get overwritten by accident later.
 
 ## Use ##
 For details on using the spidergraphs, please download https://www.oregondqp.org/documents/Spidergraph/SPIDERGRAPH%20How%20To.pdf
@@ -36,7 +37,8 @@ For more information, please visit http://opensource.org/licenses/MIT
 
 ## Changes ##
 v1.0 - 6/24/2013 - Initial release of PHP/MySQL based (non-Django) version of the spidergraph.
-<<<<<<< HEAD
 v1.01 - 1/7/2014 - Added SESSION var to update and delete lines so you can only update/delete items from your own institution.
-=======
->>>>>>> 00d5f35fc60d94baf80233a8284208371ed8de77
+
+
+
+<<<<<<< HEAD=======>>>>>>> 00d5f35fc60d94baf80233a8284208371ed8de77
