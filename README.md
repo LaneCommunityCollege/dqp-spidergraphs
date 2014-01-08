@@ -36,5 +36,7 @@ For more information, please visit http://opensource.org/licenses/MIT
 
 ## Changes ##
 v1.0 - 6/24/2013 - Initial release of PHP/MySQL based (non-Django) version of the spidergraph.
+
 v1.01 - 1/7/2014 - Added SESSION var to update and delete lines so you can only update/delete items from your own institution.
+
 v1.02 - 1/8/2014 - Added a line to delete install.php after it runs so you can't overwrite the database on accident later.
