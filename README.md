@@ -10,6 +10,8 @@ outcomes and view them in a graphical way.
 ## Server Config ##
 The application was written using PHP (5.x) and MySQL (5.x) on a Linux server.  PHP and MySQL are used conservatively, so you should be able to install this on any server with current versions of PHP/MySQL and have it up and running within a few minutes.
 
+Unfortunately, this was written using PHP's MYSQL_ extension, which is depricated as of PHP 5.5 and will be totally gone in PHP 7.  Since the DQP has been shut down in Oregon, updating the spidergraphs has fallen far down the priority list.  If someone would like to convert all the queries over to PDO and submit it back, that would be great.  Otherwise, I'm afraid the spidergraphs have a definite expiration date.
+
 ## Install ##
 1. Download the lastest version
 2. Unzip the archive
